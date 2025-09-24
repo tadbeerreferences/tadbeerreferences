@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://tadbeerreferences.github.io/tadbeerreferences/sitemap.xml
