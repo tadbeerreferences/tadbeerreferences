@@ -1,162 +1,92 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="خدمات تدبير – عمالة منزلية متخصصة في التنظيف، الرعاية، والصيانة. تواصل معنا عبر واتساب">
-    <meta name="keywords" content="تدبير, عمالة منزلية, تنظيف, رعاية, صيانة, توظيف, خدمات منزلية">
-    <meta name="author" content="تدبير">
-    <title>تدبير - خدمات عمالة منزلية موثوقة</title>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;600&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <style>
-        body { margin: 0; font-family: 'Tajawal', sans-serif; background-color: #f7f7f7; color: #333; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>تدبير - خدمات عمالة منزلية موثوقة</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;600&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<style>
+body { margin: 0; font-family: 'Tajawal', sans-serif; background-color: #f7f7f7; color: #333; }
 
-        /* Header */
-        header { background-color: #fff; padding: 20px; position: fixed; width: 100%; top: 0; z-index: 1000; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
-        header nav { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; position: relative; }
-        header nav .logo { font-size: 22px; font-weight: 700; color: #2563eb; }
-        header nav ul { display: flex; list-style: none; gap: 30px; }
-        header nav ul li { display: inline-block; }
+/* Header */
+header { background-color: #fff; padding: 20px 0; position: fixed; width: 100%; top: 0; z-index: 1000; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+header nav { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; position: relative; padding: 0 20px; }
+header nav .logo { font-size: 24px; font-weight: 700; color: #2563eb; }
+header nav ul { display: flex; list-style: none; gap: 30px; }
+header nav ul li a { text-decoration: none; color: #333; font-weight: 600; transition: 0.3s; }
+header nav ul li a:hover { color: #10b981; }
 
-        /* Mobile Menu (Hamburger) */
-        .menu-icon { 
-            display: block; 
-            cursor: pointer; 
-            position: absolute; 
-            left: 20px; /* الهامبرغر على اليسار */
-            top: 10px; /* رفع الهامبرغر قليلاً */
-        }
-        .menu-icon div { 
-            width: 30px; 
-            height: 4px; 
-            background-color: #333; 
-            margin: 6px 0; 
-        }
-        .mobile-menu { 
-            position: fixed; 
-            top: 0; 
-            left: 0; 
-            background-color: #fff; 
-            width: 100%; 
-            height: 100vh; 
-            display: flex; 
-            flex-direction: column; 
-            justify-content: center; 
-            align-items: center; 
-            transform: translateX(-100%); 
-            transition: transform 0.3s ease; 
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-        }
-        .mobile-menu.open { 
-            transform: translateX(0); 
-        }
-        .mobile-menu a { 
-            text-decoration: none; 
-            font-size: 24px; 
-            margin: 10px 0; 
-            color: #333; 
-            font-weight: 600; 
-        }
+/* Hamburger */
+.menu-icon { display: none; cursor: pointer; position: absolute; left: 20px; top: 15px; z-index: 1100; }
+.menu-icon div { width: 30px; height: 4px; background-color: #333; margin: 6px 0; }
 
-        /* Scroll Smooth Effect */
-        html {
-            scroll-behavior: smooth;
-        }
+/* Mobile Menu */
+.mobile-menu { position: fixed; top: 0; left: 0; width: 100%; height: 100vh; background: #fff; display: flex; flex-direction: column; justify-content: center; align-items: center; transform: translateX(-100%); transition: 0.3s ease; z-index: 1050; }
+.mobile-menu.open { transform: translateX(0); }
+.mobile-menu a { font-size: 24px; font-weight: 600; color: #333; margin: 15px 0; text-decoration: none; }
+.mobile-menu a:hover { color: #10b981; }
 
-        /* Pricing Section */
-        .pricing-section { padding: 60px 20px; background-color: #f7f7f7; text-align: center; }
-        .pricing-title { font-size: 30px; font-weight: 600; color: #2563eb; margin-bottom: 40px; }
-        .pricing-cards { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
-        .pricing-card { background-color: #fff; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); border-radius: 12px; padding: 30px; width: 300px; text-align: center; margin-bottom: 20px; transition: 0.3s; }
-        .pricing-card:hover { transform: translateY(-5px); }
-        .pricing-card h3 { font-size: 24px; color: #2563eb; margin: 20px 0; }
-        .pricing-card p { font-size: 16px; color: #666; margin: 20px 0; }
-        .pricing-card .price { font-size: 30px; color: #10b981; font-weight: 700; margin: 15px 0; }
-        .pricing-card a { text-decoration: none; background-color: #10b981; color: white; padding: 12px 20px; border-radius: 6px; font-weight: 600; transition: 0.3s; }
-        .pricing-card a:hover { background-color: #0f9a6e; }
+/* Scroll smooth */
+html { scroll-behavior: smooth; }
 
-        /* Services Section */
-        .services-section { padding: 60px 20px; background-color: #fff; text-align: center; }
-        .services-title { font-size: 30px; font-weight: 600; color: #2563eb; margin-bottom: 40px; }
-        .service-card { background-color: #f1f5f9; border-radius: 10px; padding: 30px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); text-align: center; margin-bottom: 20px; width: 300px; transition: 0.3s; }
-        .service-card:hover { transform: translateY(-5px); }
-        .service-card h4 { font-size: 22px; color: #2563eb; margin-bottom: 10px; }
-        .service-card p { font-size: 16px; color: #666; }
+/* Services Section */
+.services-section { padding: 120px 20px 60px 20px; background-color: #fff; text-align: center; }
+.services-title { font-size: 32px; font-weight: 700; color: #2563eb; margin-bottom: 15px; }
+.services-section p { font-size: 18px; color: #555; }
 
-        /* New Section for the three images with text below each */
-        .image-section { padding: 60px 20px; background-color: #f7f7f7; text-align: center; }
-        .image-section img { width: 80%; height: auto; border-radius: 8px; margin-bottom: 20px; }
-        .image-section .image-text { font-size: 18px; color: #666; }
+/* Image Section */
+.image-section { padding: 60px 20px; background-color: #f7f7f7; text-align: center; }
+.image-section img { width: 80%; max-width: 400px; height: auto; border-radius: 10px; margin-bottom: 20px; transition: transform 0.3s ease; }
+.image-section img:hover { transform: scale(1.05); }
+.image-section .image-text { font-size: 18px; color: #555; }
 
-        /* WhatsApp Floating Button */
-        .whatsapp-btn { position: fixed; bottom: 20px; left: 20px; background-color: #25d366; color: white; padding: 15px 20px; border-radius: 50px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); display: flex; align-items: center; gap: 10px; font-weight: bold; cursor: pointer; z-index: 1000; transition: 0.3s; }
-        .whatsapp-btn svg { width: 25px; height: 25px; }
-        .whatsapp-btn span { font-size: 16px; color: white; }
+/* About Section */
+.about-section { padding: 60px 20px; background-color: #fff; text-align: center; }
+.about-section h2 { font-size: 30px; color: #2563eb; margin-bottom: 15px; }
+.about-section p { font-size: 18px; color: #555; max-width: 800px; margin: 0 auto 40px auto; line-height: 1.6; }
 
-        /* Responsiveness */
-        @media (max-width: 768px) {
-            header nav ul { display: none; }
-            .menu-icon { display: block; }
-            .pricing-cards { flex-direction: column; align-items: center; }
-            .service-card { width: 80%; }
-        }
+/* Cards Section */
+.cards-section { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-bottom: 60px; }
+.card { background-color: #f1f5f9; border-radius: 12px; padding: 30px; width: 280px; text-align: center; box-shadow: 0 6px 15px rgba(0,0,0,0.1); transition: transform 0.3s, box-shadow 0.3s; }
+.card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.15); }
+.card i { font-size: 40px; color: #10b981; margin-bottom: 15px; }
+.card h3 { font-size: 22px; color: #2563eb; margin-bottom: 10px; }
+.card p { font-size: 16px; color: #555; line-height: 1.5; }
 
-        /* تنسيق قسم العدادات مع الأيقونات */
-        .counter-section {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 40px;
-            padding: 60px 20px;
-            background-color: #f7f7f7;
-            flex-wrap: wrap;
-        }
-        .counter-card {
-            background-color: #fff;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            width: 200px;
-            margin-bottom: 20px;
-        }
-        .counter-card i {
-            font-size: 40px;
-            color: #2563eb;
-            margin-bottom: 15px;
-        }
-        .counter {
-            font-size: 36px;
-            font-weight: 700;
-            color: #10b981;
-            margin-bottom: 10px;
-        }
-        .counter-card p {
-            font-size: 16px;
-            color: #333;
-        }
+/* Pricing Section */
+.pricing-section { padding: 60px 20px; text-align: center; }
+.pricing-title { font-size: 30px; font-weight: 600; color: #2563eb; margin-bottom: 40px; }
+.pricing-cards { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+.pricing-card { background-color: #fff; border-radius: 15px; padding: 25px; width: 280px; text-align: center; box-shadow: 0 6px 18px rgba(0,0,0,0.1); transition: transform 0.3s, box-shadow 0.3s; position: relative; }
+.pricing-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.15); }
+.pricing-card h3 { font-size: 22px; color: #2563eb; margin-bottom: 15px; }
+.pricing-card p { font-size: 16px; color: #555; margin: 10px 0; }
+.price-box { background-color: #f1f5f9; color: #10b981; padding: 8px 0; border-radius: 8px; font-weight: 700; margin-bottom: 15px; transition: 0.3s; }
+.price-box:hover { background-color: #10b981; color: #fff; transform: scale(1.1); }
+.price { font-size: 28px; color: #10b981; font-weight: 700; margin: 15px 0; }
+.btn-book { text-decoration: none; background-color: #10b981; color: #fff; padding: 12px 20px; border-radius: 6px; font-weight: 600; display: inline-block; transition: 0.3s; }
+.btn-book:hover { background-color: #0f9a6e; }
 
-        /* الأنيميشن لتفعيل العد */
-        .counter {
-            counter-reset: count 0;
-        }
+/* Counter Section */
+.counter-section { display: flex; justify-content: center; gap: 40px; padding: 60px 20px; background-color: #f7f7f7; flex-wrap: wrap; }
+.counter-card { background-color: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); text-align: center; width: 200px; margin-bottom: 20px; }
+.counter-card i { font-size: 40px; color: #2563eb; margin-bottom: 15px; }
+.counter { font-size: 36px; font-weight: 700; color: #10b981; margin-bottom: 10px; }
+.counter-card p { font-size: 16px; color: #333; }
 
-        /* العد المتحرك */
-        .counter {
-            animation: countUp 2s ease-out forwards;
-        }
+/* WhatsApp Button */
+.whatsapp-btn { position: fixed; bottom: 20px; left: 20px; background-color: #25d366; color: white; padding: 15px 20px; border-radius: 50px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); display: flex; align-items: center; gap: 10px; font-weight: bold; cursor: pointer; z-index: 1000; transition: 0.3s; }
+.whatsapp-btn svg { width: 25px; height: 25px; }
+.whatsapp-btn span { font-size: 16px; color: white; }
 
-        @keyframes countUp {
-            from {
-                content: "0";
-            }
-            to {
-                content: attr(data-count);
-            }
-        }
-
-    </style>
+/* Responsive */
+@media (max-width:768px) {
+    header nav ul { display: none; }
+    .menu-icon { display: block; }
+    .cards-section, .pricing-cards { flex-direction: column; align-items: center; }
+}
+</style>
 </head>
 <body>
 
@@ -164,185 +94,160 @@
 <header>
     <nav>
         <div class="logo">تدبير</div>
-        <!-- Hamburger Menu Icon -->
-        <div class="menu-icon" id="menu-icon">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-        <!-- Main Navigation (hidden on mobile) -->
+        <div class="menu-icon" id="menu-icon"><div></div><div></div><div></div></div>
         <ul>
-        <li><a href="#home">الرئيسية</a></li>
-        <li><a href="#services">الخدمات</a></li>
-        <li><a href="#about">من نحن</a></li>
-        <li><a href="#contact">تواصل معنا</a></li>
+            <li><a href="#home">الرئيسية</a></li>
+            <li><a href="#services">الخدمات</a></li>
+            <li><a href="#about">من نحن</a></li>
+            <li><a href="#contact">تواصل معنا</a></li>
         </ul>
-        </nav>
-        </header>
-        
-        <!-- Mobile Menu -->
-        <div class="mobile-menu" id="mobile-menu">
-        <a href="#home" onclick="closeMenu()">الرئيسية</a>
-        <a href="#services" onclick="closeMenu()">الخدمات</a>
-        <a href="#about" onclick="closeMenu()">من نحن</a>
-        <a href="#contact" onclick="closeMenu()">تواصل معنا</a>
-        </div>
-        
-        <!-- Section Above Pricing (Services Center) -->
-        <section class="services-section">
-        <h2 class="services-title">مركز شامل للعمالة المنزلية</h2>
-        <p>خادمة – مربية – مدبرة منزل – ممرضة – طباخة – سائق</p>
-        </section>
-        
-        <!-- Image and Text Section -->
-        <section class="image-section">
-        <img src="P1.jpg" alt="Image 1">
-        <p class="image-text">ابتداءً من ٥٠٠٠ درهم إماراتي<br>توظيف عادل من دول المصدر<br>ضمان ١٨٠ يومًا<br>كفالة عائلية</p>
-        </section>
-        
-        <section class="image-section">
-        <img src="P2.jpg" alt="Image 2">
-        <p class="image-text">إقامة دائمة<br>ابتداءً من ٢٣٠٠ درهم إماراتي<br>عقد مرن<br>لا حاجة لأوراق حكومية<br>بدون متاعب – استبدال مجاني</p>
-        </section>
-        
-        <section class="image-section">
-        <img src="P.jpg" alt="Image 3">
-        <p class="image-text">خدمات التنظيف<br>٤ ساعات يوميًا – أسبوعيًا – شهريًا<br>متدربون بالكامل في التنظيف العميق<br>إقامة دائمة</p>
-        </section>
-        
-        <!-- Section for counters with icons -->
-        <section class="counter-section">
-        <div class="counter-card">
-        <i class="fa fa-smile"></i>
-        <div class="counter" data-count="1500">0</div>
-        <p>العملاء السعداء</p>
-        </div>
-        <div class="counter-card">
-        <i class="fa fa-shield-alt"></i>
-        <div class="counter" data-count="100">0</div>
-        <p>ضمان الخدمة</p>
-        </div>
-        <div class="counter-card">
-        <i class="fa fa-users"></i>
-        <div class="counter" data-count="30">0</div>
-        <p>عمال النظافة</p>
-        </div>
-        <div class="counter-card">
-        <i class="fa fa-check-circle"></i>
-        <div class="counter" data-count="1000">0</div>
-        <p>تم الانتهاء من عمليات التنظيف</p>
-        </div>
-        </section>
-        
-        <!-- Pricing Section -->
-        <section class="pricing-section" id="services">
-        <h2 class="pricing-title">خطة التسعير لدينا</h2>
-        <div class="pricing-cards">
+    </nav>
+</header>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobile-menu">
+    <a href="#home" onclick="closeMenu()">الرئيسية</a>
+    <a href="#services" onclick="closeMenu()">الخدمات</a>
+    <a href="#about" onclick="closeMenu()">من نحن</a>
+    <a href="#contact" onclick="closeMenu()">تواصل معنا</a>
+</div>
+
+<!-- Services Section -->
+<section class="services-section" id="services">
+    <h2 class="services-title">مركز شامل للعمالة المنزلية</h2>
+    <p>خادمة – مربية – مدبرة منزل – ممرضة – طباخة – سائق</p>
+</section>
+
+<!-- Image Sections -->
+<section class="image-section"><img src="P1.jpg" alt="Image 1"><p class="image-text">ابتداءً من ٥٠٠٠ درهم إماراتي<br>توظيف عادل من دول المصدر<br>ضمان ١٨٠ يومًا<br>كفالة عائلية</p></section>
+<section class="image-section"><img src="P2.jpg" alt="Image 2"><p class="image-text">إقامة دائمة<br>ابتداءً من ٢٣٠٠ درهم إماراتي<br>عقد مرن<br>لا حاجة لأوراق حكومية<br>بدون متاعب – استبدال مجاني</p></section>
+<section class="image-section"><img src="P.jpg" alt="Image 3"><p class="image-text">خدمات التنظيف<br>٤ ساعات يوميًا – أسبوعيًا – شهريًا<br>متدربون بالكامل في التنظيف العميق<br>إقامة دائمة</p></section>
+
+<!-- About Section -->
+<section class="about-section" id="about">
+    <h2>نبذة عن الشركة</h2>
+    <p>نسعى باستمرار لتحسين معاييركم العالية لنكون الأفضل في هذا المجال. الثقة في خدمات التنظيف لا تكفي.</p>
+</section>
+
+<!-- Residential & Commercial Cards -->
+<section class="cards-section">
+    <div class="card"><i class="fa fa-home"></i><h3>سكني</h3><p>نسعى دائما لتلبية طلباتكم وتقديم افضل معايير النظافة والأمان</p></div>
+    <div class="card"><i class="fa fa-building"></i><h3>تجاري</h3><p>عروض مقدمة لكافة الأنشطة التجارية</p></div>
+</section>
+
+<!-- Counters -->
+<section class="counter-section">
+    <div class="counter-card"><i class="fa fa-smile"></i><div class="counter" data-count="1500">0</div><p>العملاء السعداء</p></div>
+    <div class="counter-card"><i class="fa fa-shield-alt"></i><div class="counter" data-count="100">0</div><p>ضمان الخدمة</p></div>
+    <div class="counter-card"><i class="fa fa-users"></i><div class="counter" data-count="30">0</div><p>عمال النظافة</p></div>
+    <div class="counter-card"><i class="fa fa-check-circle"></i><div class="counter" data-count="1000">0</div><p>تم الانتهاء من عمليات التنظيف</p></div>
+</section>
+
+<!-- Pricing Section -->
+<section class="pricing-section" id="pricing">
+    <h2 class="pricing-title">خطة التسعير لدينا</h2>
+    <div class="pricing-cards">
         <div class="pricing-card">
-        <h3>شخصي</h3>
-        <p>سعر الباقة الأساسية: 2,500 ريال سعودي / الشهر</p>
-        <p>المدة: شهر واحد</p>
-        <p>يشمل: خادمة بدوام جزئي (5 أيام في الأسبوع)، التنظيف والتنظيم فقط، دعم العملاء الأساسي، استبدال واحد شهريًا</p>
-        <div class="price">2,500 ريال</div>
-        <a href="https://wa.me/966597816391?text=مرحبًا%20أود%20حجز%20خدمة%20شخصي%20لدي%20الاسم%20[اسمك]" target="_blank">احجز الآن</a>
+            <h3>شخصي</h3>
+            <div class="price-box">Month/2,500</div>
+            <p>سعر الباقة الأساسية: 2,500 ريال سعودي / الشهر</p>
+            <p>المدة: شهر واحد</p>
+            <p>يشمل: خادمة بدوام جزئي، التنظيف والتنظيم فقط، دعم العملاء الأساسي، استبدال واحد شهريًا</p>
+            <div class="price">2,500 ريال</div>
+            <a href="https://wa.me/966597816391?text=حجز%20شخصي" class="btn-book" target="_blank">احجز الآن</a>
         </div>
-        
         <div class="pricing-card">
-        <h3>قياسي</h3>
-        <p>سعر الباقة القياسية: 3,500 ريال سعودي / الشهر</p>
-        <p>المدة: من شهر إلى 3 أشهر</p>
-        <p>يشمل: خادمة منزلية بدوام كامل، التنظيف والغسيل والكي، دعم على مدار الساعة طوال أيام الأسبوع، ما يصل إلى بديلين شهريًا</p>
-        <div class="price">3,500 ريال</div>
-        <a href="https://wa.me/966597816391?text=مرحبًا%20أود%20حجز%20خدمة%20قياسي%20لدي%20الاسم%20[اسمك]" target="_blank">احجز الآن</a>
+            <h3>قياسي</h3>
+            <div class="price-box">Month/3,500</div>
+            <p>سعر الباقة القياسية: 3,500 ريال سعودي / الشهر</p>
+            <p>المدة: من شهر إلى 3 أشهر</p>
+            <p>يشمل: خادمة منزلية بدوام كامل، التنظيف والغسيل والكي، دعم على مدار الساعة، ما يصل إلى بديلين شهريًا</p>
+            <div class="price">3,500 ريال</div>
+            <a href="https://wa.me/966597816391?text=حجز%20قياسي" class="btn-book" target="_blank">احجز الآن</a>
         </div>
-        
         <div class="pricing-card">
-        <h3>مَشرُوع</h3>
-        <p>باقة رعاية الأسرة: 4,500 ريال سعودي / الشهر</p>
-        <p>المدة: من 3 إلى 6 أشهر</p>
-        <p>يشمل: خادمة ذات خبرة للأسر الكبيرة، رعاية الأطفال ومساعدة كبار السن، دعم منزلي كامل، فحص صحي شهري للخادمة، بدائل غير محدودة</p>
-        <div class="price">4,500 ريال</div>
-        <a href="https://wa.me/966597816391?text=مرحبًا%20أود%20حجز%20خدمة%20مَشرُوع%20لدي%20الاسم%20[اسمك]" target="_blank">احجز الآن</a>
+            <h3>مشروع</h3>
+            <div class="price-box">Month/4,500</div>
+            <p>باقة رعاية الأسرة: 4,500 ريال سعودي / الشهر</p>
+            <p>المدة: من 3 إلى 6 أشهر</p>
+            <p>يشمل: خادمة ذات خبرة، رعاية الأطفال والمسنين، دعم منزلي كامل، فحص صحي شهري، بدائل غير محدودة</p>
+            <div class="price">4,500 ريال</div>
+            <a href="https://wa.me/966597816391?text=حجز%20مشروع" class="btn-book" target="_blank">احجز الآن</a>
         </div>
-        
         <div class="pricing-card">
-        <h3>احترافي</h3>
-        <p>باقة VIP المميزة: 6,000 ريال سعودي / الشهر</p>
-        <p>المدة: من 6 إلى 12 شهرًا</p>
-        <p>يشمل: خادمة متعددة اللغات مدربة تدريبًا عاليًا، الطبخ والتنظيف العميق، رعاية الأطفال ورعاية المسنين، خدمة عملاء ذات أولوية، مهام وجدول زمني قابل للتخصيص، خصم الولاء السنوي</p>
-        <div class="price">6,000 ريال</div>
-        <a href="https://wa.me/966597816391?text=مرحبًا%20أود%20حجز%20خدمة%20احترافي%20لدي%20الاسم%20[اسمك]" target="_blank">احجز الآن</a>
+            <h3>احترافي</h3>
+            <div class="price-box">Month/6,000</div>
+            <p>باقة VIP المميزة: 6,000 ريال سعودي / الشهر</p>
+            <p>المدة: من 6 إلى 12 شهرًا</p>
+            <p>يشمل: خادمة متعددة اللغات مدربة، الطبخ والتنظيف العميق، رعاية الأطفال والمسنين، خدمة عملاء أولية، جدول مهام قابل للتخصيص، خصم الولاء السنوي</p>
+            <div class="price">6,000 ريال</div>
+            <a href="https://wa.me/966597816391?text=حجز%20احترافي" class="btn-book" target="_blank">احجز الآن</a>
         </div>
-        </div>
-        </section>
-        
-        <!-- WhatsApp Floating Button -->
-        <div class="whatsapp-btn" onclick="window.open('https://wa.me/966597816391', '_blank');">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-        <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm2 17h-4v-2h4v2zm0-4h-4V7h4v6z"/>
-        </svg>
-        <span>اطلب الخدمة عبر واتساب</span>
-        </div>
-        
-        <!-- Mobile Menu Script -->
-        <script>
-        // Toggle mobile menu
-        document.getElementById('menu-icon').addEventListener('click', function() {
-        document.getElementById('mobile-menu').classList.toggle('open');
-        });
-        
-        // Close mobile menu and scroll smoothly
-        function closeMenu() {
-        document.getElementById('mobile-menu').classList.remove('open');
-        window.scrollTo({
-        top: document.querySelector('.services-section').offsetTop - 70,
-        behavior: 'smooth'
-        });
-        }
-        
-        // Smooth scroll for anchor links
-        document.querySelectorAll('.mobile-menu a, header nav a').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
+    </div>
+</section>
+
+<!-- WhatsApp -->
+<div class="whatsapp-btn" onclick="window.open('https://wa.me/966597816391', '_blank');">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm2 17h-4v-2h4v2zm0-4h-4V7h4v6z"/></svg>
+    <span>اطلب الخدمة عبر واتساب</span>
+</div>
+
+<script>
+// Mobile menu
+document.getElementById('menu-icon').addEventListener('click', () => { document.getElementById('mobile-menu').classList.toggle('open'); });
+function closeMenu(){ document.getElementById('mobile-menu').classList.remove('open'); }
+
+// Smooth scroll
+document.querySelectorAll('.mobile-menu a, header nav a').forEach(anchor => {
+    anchor.addEventListener('click', function(e){
         e.preventDefault();
-        const targetId = this.getAttribute('href').substring(1);
-        const targetElement = document.getElementById(targetId);
-        window.scrollTo({
-        top: targetElement.offsetTop - 70,
-        behavior: 'smooth'
-        });
-        document.getElementById('mobile-menu').classList.remove('open'); // Close the mobile menu after selecting an option
-        });
-        });
-        </script>
-        
-        <script>
-        // Function to trigger the counters when the section is in the viewport
-        window.addEventListener('scroll', function () {
-        const counters = document.querySelectorAll('.counter');
-        counters.forEach(counter => {
-        if (isInViewport(counter)) {
-        const count = counter.getAttribute('data-count');
-        let current = 0;
-        const increment = Math.ceil(count / 100);
-        
-        const updateCounter = setInterval(() => {
-        current += increment;
-        if (current >= count) {
-        counter.textContent = count;clearInterval(updateCounter);
-        } else {
-        counter.textContent = current;
-        }
-        }, 10);
-        }
-        });
-        });
-        
-        // Function to check if an element is in the viewport
-        function isInViewport(element) {
-        const rect = element.getBoundingClientRect();
-        return (rect.top >= 0 && rect.bottom <= window.innerHeight);
-        }
-        </script>
-        
-        </body>
-        </html>
+        const target = document.querySelector(this.getAttribute('href'));
+        if(target) window.scrollTo({top: target.offsetTop - 80, behavior:'smooth'});
+        closeMenu();
+    });
+});
+
+// Counters
+function isInViewport(el){ const rect = el.getBoundingClientRect(); return rect.top < window.innerHeight && rect.bottom > 0; }
+function runCounters(){
+    document.querySelectorAll('.counter').forEach(counter => {
+        if(counter.dataset.animated) return;
+        if(isInViewport(counter)){
+            counter.dataset.animated = true;
+            let count = +counter.getAttribute('data-count'); let current = 0;
+            const inc = Math.ceil(count/100);
+            const interval = setInterval(()=>{ current+=inc; if(current>=count){ counter.textContent=count;clearInterval(interval); } else { counter.textContent = current; } }, 10);
+            }
+            });
+            }
+            
+            window.addEventListener('scroll', runCounters);
+            window.addEventListener('load', runCounters);
+            
+            // Close mobile menu if clicked outside
+            document.addEventListener('click', function(event){
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIcon = document.getElementById('menu-icon');
+            if(!mobileMenu.contains(event.target) && !menuIcon.contains(event.target)){
+            mobileMenu.classList.remove('open');
+            }
+            });
+            
+            // Price-box hover effect (optional JS enhancement)
+            document.querySelectorAll('.price-box').forEach(box=>{
+            box.addEventListener('mouseenter', ()=> {
+            box.style.backgroundColor = '#10b981';
+            box.style.color = '#fff';
+            box.style.transform = 'scale(1.1)';
+            box.style.transition = '0.3s';
+            });
+            box.addEventListener('mouseleave', ()=> {
+            box.style.backgroundColor = '#f1f5f9';
+            box.style.color = '#10b981';
+            box.style.transform = 'scale(1)';
+            });
+            });
+            </script>
+            
+            </body>
+            </html>
