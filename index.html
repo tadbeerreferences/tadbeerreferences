@@ -3,9 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>تدبير - خدمات عمالة منزلية موثوقة</title>
+
+<!-- SEO Meta Tags -->
+<title>تدبير - خدمات العمالة المنزلية الموثوقة في الإمارات</title>
+<meta name="description" content="تدبير - خدمات العمالة المنزلية الموثوقة: خادمة، مربية، مدبرة منزل، طباخة، ممرضة، سائق. احجز الآن بسهولة عبر واتساب.">
+<meta name="keywords" content="عمالة منزلية, خادمة, مربية, مدبرة منزل, طباخة, ممرضة, سائق, تنظيف, الإمارات, توظيف, خدمات منزلية">
+<meta name="robots" content="index, follow">
+<meta name="google-site-verification" content="G5SeFng7gigSTbd7pTmhgPYbdNGVp9knwTBaRVFNk9A" />
 <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;600&display=swap" rel="stylesheet">
 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
 <style>
 body { margin: 0; font-family: 'Tajawal', sans-serif; background-color: #f7f7f7; color: #333; }
 
@@ -30,19 +37,24 @@ header nav ul li a:hover { color: #10b981; }
 /* Scroll smooth */
 html { scroll-behavior: smooth; }
 
+/* Hero Section */
+.hero-section { padding: 140px 20px 60px 20px; text-align: center; background-color:#fff; }
+.hero-section h1 { font-size: 36px; color:#2563eb; margin-bottom:15px; }
+.hero-section h2 { font-size: 24px; color:#10b981; margin-bottom:25px; }
+
 /* Services Section */
-.services-section { padding: 120px 20px 60px 20px; background-color: #fff; text-align: center; }
-.services-title { font-size: 32px; font-weight: 700; color: #2563eb; margin-bottom: 15px; }
-.services-section p { font-size: 18px; color: #555; }
+.services-section { padding: 60px 20px; background-color: #f7f7f7; text-align: center; }
+.services-section h2 { font-size: 28px; color: #2563eb; margin-bottom: 15px; }
+.services-section p { font-size: 18px; color: #555; max-width:800px; margin:0 auto; line-height:1.6; }
 
 /* Image Section */
-.image-section { padding: 60px 20px; background-color: #f7f7f7; text-align: center; }
+.image-section { padding: 60px 20px; background-color: #fff; text-align: center; }
 .image-section img { width: 80%; max-width: 400px; height: auto; border-radius: 10px; margin-bottom: 20px; transition: transform 0.3s ease; }
 .image-section img:hover { transform: scale(1.05); }
 .image-section .image-text { font-size: 18px; color: #555; }
 
 /* About Section */
-.about-section { padding: 60px 20px; background-color: #fff; text-align: center; }
+.about-section { padding: 60px 20px; background-color: #f7f7f7; text-align: center; }
 .about-section h2 { font-size: 30px; color: #2563eb; margin-bottom: 15px; }
 .about-section p { font-size: 18px; color: #555; max-width: 800px; margin: 0 auto 40px auto; line-height: 1.6; }
 
@@ -55,8 +67,8 @@ html { scroll-behavior: smooth; }
 .card p { font-size: 16px; color: #555; line-height: 1.5; }
 
 /* Pricing Section */
-.pricing-section { padding: 60px 20px; text-align: center; }
-.pricing-title { font-size: 30px; font-weight: 600; color: #2563eb; margin-bottom: 40px; }
+.pricing-section { padding: 60px 20px; text-align: center; background-color:#fff; }
+.pricing-section h2 { font-size: 30px; font-weight: 600; color: #2563eb; margin-bottom: 40px; }
 .pricing-cards { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
 .pricing-card { background-color: #fff; border-radius: 15px; padding: 25px; width: 280px; text-align: center; box-shadow: 0 6px 18px rgba(0,0,0,0.1); transition: transform 0.3s, box-shadow 0.3s; position: relative; }
 .pricing-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.15); }
@@ -74,6 +86,12 @@ html { scroll-behavior: smooth; }
 .counter-card i { font-size: 40px; color: #2563eb; margin-bottom: 15px; }
 .counter { font-size: 36px; font-weight: 700; color: #10b981; margin-bottom: 10px; }
 .counter-card p { font-size: 16px; color: #333; }
+
+/* Contact Section */
+.contact-section { padding:60px 20px 120px 20px; text-align:center; background-color:#fff; }
+.contact-section h2 { color:#2563eb; font-size:30px; margin-bottom:15px; }
+.contact-section p { font-size:18px; color:#555; max-width:600px; margin:0 auto 20px auto; }
+.contact-section a { text-decoration:none; background-color:#10b981; color:#fff; padding:12px 20px; border-radius:6px; font-weight:600; }
 
 /* WhatsApp Button */
 .whatsapp-btn { position: fixed; bottom: 20px; left: 20px; background-color: #25d366; color: white; padding: 15px 20px; border-radius: 50px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); display: flex; align-items: center; gap: 10px; font-weight: bold; cursor: pointer; z-index: 1000; transition: 0.3s; }
@@ -112,27 +130,44 @@ html { scroll-behavior: smooth; }
     <a href="#contact" onclick="closeMenu()">تواصل معنا</a>
 </div>
 
+<!-- Hero Section -->
+<section class="hero-section" id="home">
+    <h1>تدبير - خدمات العمالة المنزلية الموثوقة في الإمارات</h1>
+    <h2>خادمة منزلية – مربية – مدبرة منزل – طباخة – ممرضة – سائق</h2>
+</section>
+
 <!-- Services Section -->
 <section class="services-section" id="services">
-    <h2 class="services-title">مركز شامل للعمالة المنزلية</h2>
-    <p>خادمة – مربية – مدبرة منزل – ممرضة – طباخة – سائق</p>
+    <h2>خدمات العمالة المنزلية المتكاملة</h2>
+    <p>نقدم لكم خدمات شاملة وعالية الجودة: خادمة منزلية، مربية للأطفال، مدبرة منزل، ممرضة منزلية، طباخة محترفة، وسائق. كل خدماتنا مضمونة ومطابقة لمعايير الإمارات.</p>
 </section>
 
 <!-- Image Sections -->
-<section class="image-section"><img src="P1.jpg" alt="Image 1"><p class="image-text">ابتداءً من ٥٠٠٠ درهم إماراتي<br>توظيف عادل من دول المصدر<br>ضمان ١٨٠ يومًا<br>كفالة عائلية</p></section>
-<section class="image-section"><img src="P2.jpg" alt="Image 2"><p class="image-text">إقامة دائمة<br>ابتداءً من ٢٣٠٠ درهم إماراتي<br>عقد مرن<br>لا حاجة لأوراق حكومية<br>بدون متاعب – استبدال مجاني</p></section>
-<section class="image-section"><img src="P.jpg" alt="Image 3"><p class="image-text">خدمات التنظيف<br>٤ ساعات يوميًا – أسبوعيًا – شهريًا<br>متدربون بالكامل في التنظيف العميق<br>إقامة دائمة</p></section>
+<section class="image-section">
+    <img src="P1.jpg" alt="خادمة منزلية محترفة في الإمارات">
+    <p class="image-text">ابتداءً من ٥٠٠٠ درهم إماراتي<br>توظيف عادل من دول المصدر<br>ضمان ١٨٠ يومًا<br>كفالة عائلية</p>
+</section>
+
+<section class="image-section">
+    <img src="P2.jpg" alt="خدمات إقامة دائمة وتوظيف العمالة المنزلية">
+    <p class="image-text">إقامة دائمة<br>ابتداءً من ٢٣٠٠ درهم إماراتي<br>عقد مرن<br>لا حاجة لأوراق حكومية<br>بدون متاعب – استبدال مجاني</p>
+</section>
+
+<section class="image-section">
+    <img src="P.jpg" alt="خدمات تنظيف المنزل بالكامل">
+    <p class="image-text">خدمات التنظيف<br>٤ ساعات يوميًا – أسبوعيًا – شهريًا<br>متدربون بالكامل في التنظيف العميق<br>إقامة دائمة</p>
+</section>
 
 <!-- About Section -->
 <section class="about-section" id="about">
     <h2>نبذة عن الشركة</h2>
-    <p>نسعى باستمرار لتحسين معاييركم العالية لنكون الأفضل في هذا المجال. الثقة في خدمات التنظيف لا تكفي.</p>
+    <p>نسعى باستمرار لتحسين معاييركم العالية لنكون الأفضل في مجال العمالة المنزلية والخدمات المنزلية في الإمارات. نقدم الثقة والجودة في كل خدمة، لضمان راحة ورضا عملائنا.</p>
 </section>
 
 <!-- Residential & Commercial Cards -->
 <section class="cards-section">
-    <div class="card"><i class="fa fa-home"></i><h3>سكني</h3><p>نسعى دائما لتلبية طلباتكم وتقديم افضل معايير النظافة والأمان</p></div>
-    <div class="card"><i class="fa fa-building"></i><h3>تجاري</h3><p>عروض مقدمة لكافة الأنشطة التجارية</p></div>
+    <div class="card"><i class="fa fa-home"></i><h3>سكني</h3><p>خدمات منزلية احترافية تشمل التنظيف، التنظيم، ورعاية الأطفال والمسنين.</p></div>
+    <div class="card"><i class="fa fa-building"></i><h3>تجاري</h3><p>خدمات مخصصة لجميع الأنشطة التجارية، مع العمالة المدربة لضمان الجودة والكفاءة.</p></div>
 </section>
 
 <!-- Counters -->
@@ -140,13 +175,14 @@ html { scroll-behavior: smooth; }
     <div class="counter-card"><i class="fa fa-smile"></i><div class="counter" data-count="1500">0</div><p>العملاء السعداء</p></div>
     <div class="counter-card"><i class="fa fa-shield-alt"></i><div class="counter" data-count="100">0</div><p>ضمان الخدمة</p></div>
     <div class="counter-card"><i class="fa fa-users"></i><div class="counter" data-count="30">0</div><p>عمال النظافة</p></div>
-    <div class="counter-card"><i class="fa fa-check-circle"></i><div class="counter" data-count="1000">0</div><p>تم الانتهاء من عمليات التنظيف</p></div>
+    <div class="counter-card"><i class="fa fa-check-circle"></i><div class="counter" data-count="1000">0</div><p>عمليات التنظيف المنجزة</p></div>
 </section>
 
 <!-- Pricing Section -->
 <section class="pricing-section" id="pricing">
-    <h2 class="pricing-title">خطة التسعير لدينا</h2>
+    <h2>خطة التسعير لدينا</h2>
     <div class="pricing-cards">
+        <!-- Pricing cards remain unchanged from your version -->
         <div class="pricing-card">
             <h3>شخصي</h3>
             <div class="price-box">Month/2,500</div>
@@ -187,12 +223,10 @@ html { scroll-behavior: smooth; }
 </section>
 
 <!-- Contact Section -->
-<section id="contact" style="padding:60px 20px 120px 20px; text-align:center; background-color:#fff;">
-    <h2 style="color:#2563eb; font-size:30px; margin-bottom:15px;">تواصل معنا</h2>
-    <p style="font-size:18px; color:#555; max-width:600px; margin:0 auto 20px auto;">
-        يمكنك التواصل معنا عبر الواتساب أو البريد الإلكتروني أو الهاتف.
-    </p>
-    <a href="https://wa.me/966597816391" target="_blank" style="text-decoration:none; background-color:#10b981; color:#fff; padding:12px 20px; border-radius:6px; font-weight:600;">اطلب الخدمة الآن</a>
+<section class="contact-section" id="contact">
+    <h2>تواصل معنا</h2>
+    <p>يمكنك التواصل معنا عبر الواتساب أو البريد الإلكتروني أو الهاتف لحجز خدمات العمالة المنزلية الموثوقة.</p>
+    <a href="https://wa.me/966597816391" target="_blank">اطلب الخدمة الآن</a>
 </section>
 
 <!-- WhatsApp -->
@@ -201,6 +235,7 @@ html { scroll-behavior: smooth; }
     <span>اطلب الخدمة عبر واتساب</span>
 </div>
 
+<!-- Scripts remain unchanged -->
 <script>
 // Mobile menu toggle
 document.getElementById('menu-icon').addEventListener('click', () => { 
@@ -212,66 +247,66 @@ function closeMenu(){ document.getElementById('mobile-menu').classList.remove('o
 document.querySelectorAll('.mobile-menu a, header nav a').forEach(anchor => {
     anchor.addEventListener('click', function(e){
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if(target) window.scrollTo({top: target.offsetTop - 80, behavior:'smooth'});
-        closeMenu();
-    });
-});
-
-// Counters
-function isInViewport(el){ 
-    const rect = el.getBoundingClientRect(); 
-    return rect.top < window.innerHeight && rect.bottom > 0; 
-}
-
-function runCounters(){
-    document.querySelectorAll('.counter').forEach(counter => {
-        if(counter.dataset.animated) return;
-        if(isInViewport(counter)){
-            counter.dataset.animated = true;
-            let count = +counter.getAttribute('data-count'); 
-            let current = 0;
-            const inc = Math.ceil(count/100);
-            const interval = setInterval(()=>{
-                current += inc; 
-                if(current >= count){ 
-                    counter.textContent = count;
-                    clearInterval(interval); 
-                } else { 
-                    counter.textContent = current; 
-                } 
-            }, 10);
-        }
-    });
-}
-
-window.addEventListener('scroll', runCounters);
-window.addEventListener('load', runCounters);
-
-// Close mobile menu if clicked outside
-document.addEventListener('click', function(event){
-    const mobileMenu = document.getElementById('mobile-menu');
-    const menuIcon = document.getElementById('menu-icon');
-    if(!mobileMenu.contains(event.target) && !menuIcon.contains(event.target)){
-        mobileMenu.classList.remove('open');
-    }
-});
-
-// Price-box hover effect (optional JS enhancement)
-document.querySelectorAll('.price-box').forEach(box=>{
-    box.addEventListener('mouseenter', ()=> {
-        box.style.backgroundColor = '#10b981';
-        box.style.color = '#fff';
-        box.style.transform = 'scale(1.1)';
-        box.style.transition = '0.3s';
-    });
-    box.addEventListener('mouseleave', ()=> {
-        box.style.backgroundColor = '#f1f5f9';
-        box.style.color = '#10b981';
-        box.style.transform = 'scale(1)';
-    });
-});
-</script>
-
-</body>
-</html>
+      const target = document.querySelector(this.getAttribute('href'));
+      if(target) window.scrollTo({top: target.offsetTop - 80, behavior:'smooth'});
+      closeMenu();
+      });
+      });
+      
+      // Counters
+      function isInViewport(el){ 
+      const rect = el.getBoundingClientRect(); 
+      return rect.top < window.innerHeight && rect.bottom > 0; 
+      }
+      
+      function runCounters(){
+      document.querySelectorAll('.counter').forEach(counter => {
+      if(counter.dataset.animated) return;
+      if(isInViewport(counter)){
+      counter.dataset.animated = true;
+      let count = +counter.getAttribute('data-count'); 
+      let current = 0;
+      const inc = Math.ceil(count/100);
+      const interval = setInterval(()=>{
+      current += inc; 
+      if(current >= count){ 
+      counter.textContent = count;
+      clearInterval(interval); 
+      } else { 
+      counter.textContent = current; 
+      } 
+      }, 10);
+      }
+      });
+      }
+      
+      window.addEventListener('scroll', runCounters);
+      window.addEventListener('load', runCounters);
+      
+      // Close mobile menu if clicked outside
+      document.addEventListener('click', function(event){
+      const mobileMenu = document.getElementById('mobile-menu');
+      const menuIcon = document.getElementById('menu-icon');
+      if(!mobileMenu.contains(event.target) && !menuIcon.contains(event.target)){
+      mobileMenu.classList.remove('open');
+      }
+      });
+      
+      // Price-box hover effect
+      document.querySelectorAll('.price-box').forEach(box=>{
+      box.addEventListener('mouseenter', ()=> {
+      box.style.backgroundColor = '#10b981';
+      box.style.color = '#fff';
+      box.style.transform = 'scale(1.1)';
+      box.style.transition = '0.3s';
+      });
+      box.addEventListener('mouseleave', ()=> {
+      box.style.backgroundColor = '#f1f5f9';
+      box.style.color = '#10b981';
+      box.style.transform = 'scale(1)';
+      });
+      });
+      </script>
+      
+      </body>
+      </html>
