@@ -97,7 +97,7 @@ html { scroll-behavior: smooth; }
         <div class="menu-icon" id="menu-icon"><div></div><div></div><div></div></div>
         <ul>
             <li><a href="#home">الرئيسية</a></li>
-            <li><a href="#services">الخدمات</a></li>
+            <li><a href="#pricing">خطة التسعير</a></li>
             <li><a href="#about">من نحن</a></li>
             <li><a href="#contact">تواصل معنا</a></li>
         </ul>
@@ -107,7 +107,7 @@ html { scroll-behavior: smooth; }
 <!-- Mobile Menu -->
 <div class="mobile-menu" id="mobile-menu">
     <a href="#home" onclick="closeMenu()">الرئيسية</a>
-    <a href="#services" onclick="closeMenu()">الخدمات</a>
+    <a href="#pricing" onclick="closeMenu()">خطة التسعير</a>
     <a href="#about" onclick="closeMenu()">من نحن</a>
     <a href="#contact" onclick="closeMenu()">تواصل معنا</a>
 </div>
@@ -186,6 +186,15 @@ html { scroll-behavior: smooth; }
     </div>
 </section>
 
+<!-- Contact Section -->
+<section id="contact" style="padding:60px 20px 120px 20px; text-align:center; background-color:#fff;">
+    <h2 style="color:#2563eb; font-size:30px; margin-bottom:15px;">تواصل معنا</h2>
+    <p style="font-size:18px; color:#555; max-width:600px; margin:0 auto 20px auto;">
+        يمكنك التواصل معنا عبر الواتساب أو البريد الإلكتروني أو الهاتف.
+    </p>
+    <a href="https://wa.me/966597816391" target="_blank" style="text-decoration:none; background-color:#10b981; color:#fff; padding:12px 20px; border-radius:6px; font-weight:600;">اطلب الخدمة الآن</a>
+</section>
+
 <!-- WhatsApp -->
 <div class="whatsapp-btn" onclick="window.open('https://wa.me/966597816391', '_blank');">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm2 17h-4v-2h4v2zm0-4h-4V7h4v6z"/></svg>
@@ -193,8 +202,10 @@ html { scroll-behavior: smooth; }
 </div>
 
 <script>
-// Mobile menu
-document.getElementById('menu-icon').addEventListener('click', () => { document.getElementById('mobile-menu').classList.toggle('open'); });
+// Mobile menu toggle
+document.getElementById('menu-icon').addEventListener('click', () => { 
+    document.getElementById('mobile-menu').classList.toggle('open'); 
+});
 function closeMenu(){ document.getElementById('mobile-menu').classList.remove('open'); }
 
 // Smooth scroll
@@ -208,46 +219,59 @@ document.querySelectorAll('.mobile-menu a, header nav a').forEach(anchor => {
 });
 
 // Counters
-function isInViewport(el){ const rect = el.getBoundingClientRect(); return rect.top < window.innerHeight && rect.bottom > 0; }
+function isInViewport(el){ 
+    const rect = el.getBoundingClientRect(); 
+    return rect.top < window.innerHeight && rect.bottom > 0; 
+}
+
 function runCounters(){
     document.querySelectorAll('.counter').forEach(counter => {
         if(counter.dataset.animated) return;
         if(isInViewport(counter)){
             counter.dataset.animated = true;
-            let count = +counter.getAttribute('data-count'); let current = 0;
+            let count = +counter.getAttribute('data-count'); 
+            let current = 0;
             const inc = Math.ceil(count/100);
-            const interval = setInterval(()=>{ current+=inc; if(current>=count){ counter.textContent=count;clearInterval(interval); } else { counter.textContent = current; } }, 10);
-            }
-            });
-            }
-            
-            window.addEventListener('scroll', runCounters);
-            window.addEventListener('load', runCounters);
-            
-            // Close mobile menu if clicked outside
-            document.addEventListener('click', function(event){
-            const mobileMenu = document.getElementById('mobile-menu');
-            const menuIcon = document.getElementById('menu-icon');
-            if(!mobileMenu.contains(event.target) && !menuIcon.contains(event.target)){
-            mobileMenu.classList.remove('open');
-            }
-            });
-            
-            // Price-box hover effect (optional JS enhancement)
-            document.querySelectorAll('.price-box').forEach(box=>{
-            box.addEventListener('mouseenter', ()=> {
-            box.style.backgroundColor = '#10b981';
-            box.style.color = '#fff';
-            box.style.transform = 'scale(1.1)';
-            box.style.transition = '0.3s';
-            });
-            box.addEventListener('mouseleave', ()=> {
-            box.style.backgroundColor = '#f1f5f9';
-            box.style.color = '#10b981';
-            box.style.transform = 'scale(1)';
-            });
-            });
-            </script>
-            
-            </body>
-            </html>
+            const interval = setInterval(()=>{
+                current += inc; 
+                if(current >= count){ 
+                    counter.textContent = count;
+                    clearInterval(interval); 
+                } else { 
+                    counter.textContent = current; 
+                } 
+            }, 10);
+        }
+    });
+}
+
+window.addEventListener('scroll', runCounters);
+window.addEventListener('load', runCounters);
+
+// Close mobile menu if clicked outside
+document.addEventListener('click', function(event){
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('menu-icon');
+    if(!mobileMenu.contains(event.target) && !menuIcon.contains(event.target)){
+        mobileMenu.classList.remove('open');
+    }
+});
+
+// Price-box hover effect (optional JS enhancement)
+document.querySelectorAll('.price-box').forEach(box=>{
+    box.addEventListener('mouseenter', ()=> {
+        box.style.backgroundColor = '#10b981';
+        box.style.color = '#fff';
+        box.style.transform = 'scale(1.1)';
+        box.style.transition = '0.3s';
+    });
+    box.addEventListener('mouseleave', ()=> {
+        box.style.backgroundColor = '#f1f5f9';
+        box.style.color = '#10b981';
+        box.style.transform = 'scale(1)';
+    });
+});
+</script>
+
+</body>
+</html>
